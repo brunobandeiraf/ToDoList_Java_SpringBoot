@@ -3,9 +3,9 @@ package br.com.brunobandeiraf.todolist.user;
 import java.util.UUID;
 
 import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.type.descriptor.java.LocalDateTimeJavaDescriptor;
+import com.google.appengine.repackaged.org.joda.time.LocalDateTime;
 
-import jakarta.persistence.Column;
+//import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
@@ -20,12 +20,12 @@ public class UserModel {
     @GeneratedValue(generator = "UUID")
     private UUID id;
 
-    @Column(name = "username")
+    //@Column(name = "username")
     private String username;
     private String name;
     private String password;
 
     @CreationTimestamp
-    private LocalDateTimeJavaDescriptor createdAt;
+    private LocalDateTime createdAt;
 
 }
